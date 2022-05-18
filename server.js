@@ -6,7 +6,10 @@ console.log('Server.js is alive.');
 //REQUIRED
 const express = require('express');
 const cors = require('cors');
+
 require('dotenv').config();
+
+// let data = require('./data/data.json');
 
 //USE
 const app = express();  //instance of express called app
