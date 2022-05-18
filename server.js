@@ -2,13 +2,16 @@
 
 console.log('Server.js is alive.');
 
-const { response } = require('express');
+// const { response } = require('express');
 //REQUIRED
 const express = require('express');
+const cors = require('cors');
 require('dotenv').config();
 
 //USE
 const app = express();  //instance of express called app
+
+app.use(cors());
 
 const PORT = process.env.PORT || 3002;
 
@@ -31,6 +34,9 @@ app.get('*', (request, response) => {
 
 
 //ERRORS
+app.use((error, request, response, next) => {
+  response.status(500).send(error.message);
+})
 
 
 //LISTEN
