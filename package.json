@@ -1,8 +1,8 @@
 {
   "name": "city-explorer-api",
   "version": "1.0.0",
-  "description": "City Explorer back end",
-  "main": "index.js",
+  "description": "City Explorer backend",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
